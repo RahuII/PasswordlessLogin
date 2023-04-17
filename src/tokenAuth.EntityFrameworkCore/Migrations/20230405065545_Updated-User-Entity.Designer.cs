@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 using tokenAuth.EntityFrameworkCore;
@@ -12,9 +13,11 @@ using tokenAuth.EntityFrameworkCore;
 namespace tokenAuth.Migrations
 {
     [DbContext(typeof(tokenAuthDbContext))]
-    partial class tokenAuthDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230405065545_Updated-User-Entity")]
+    partial class UpdatedUserEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

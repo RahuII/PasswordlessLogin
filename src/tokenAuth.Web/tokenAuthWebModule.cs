@@ -101,6 +101,7 @@ public class tokenAuthWebModule : AbpModule
             .GetObject<IdentityBuilder>()
             .AddDefaultTokenProviders()
             .AddPasswordlessLoginProvider();
+
     }
 
     private void ConfigureAuthentication(ServiceConfigurationContext context)
